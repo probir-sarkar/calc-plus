@@ -1,12 +1,10 @@
 import "./globals.css";
-import { IBM_Plex_Mono } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { ThemeContextProvider } from "@/context/theme";
 
-const font = IBM_Plex_Mono({
-  subsets: ["latin-ext"],
-  weight: ["400", "500", "600", "700"],
-});
+// const inter = Inter({ subsets: ["latin"] });
+const font = Roboto_Slab({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-zinc-950 text-green-500 flex w-full`}>
+      <body className={`${font.className} bg-slate-50  sm:ml-80 mt-16 text-gray-700`}>
         <ThemeContextProvider>
           <Sidebar />
           {children}
