@@ -14,6 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="-0zKqJyIP-rNZxgf8aJRubOn3bd5ClI8QHdN07ZycwI"
+        />
+      </head>
       <body className={`${font.className} bg-slate-50  sm:ml-80 mt-16 text-gray-700`}>
         <ThemeContextProvider>
           <Sidebar />
