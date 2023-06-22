@@ -8,77 +8,23 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarData = [
     {
-      title: "Getting Started",
+      title: "Health and Fitness",
+      links: [{ label: "BMI Calculator", href: "/health-and-fitness/bmi-calculator" }],
+    },
+    {
+      title: "Finance",
       links: [
-        { label: "Installation", href: "#" },
-        { label: "Plugins", href: "#" },
-        { label: "Migrations", href: "#" },
-        { label: "Appearance", href: "#" },
-        { label: "Mamba UI", href: "#" },
+        { label: "EMI Calculator", href: "/finance/emi-calculator" },
+        { label: "GST Calculator", href: "/finance/gst-calculator" },
+        { label: "FD Calculator", href: "/finance/fd-calculator" },
       ],
     },
     {
-      title: "Dashboard",
+      title: "Mathematics",
       links: [
-        { label: "Header", href: "#" },
-        { label: "Drawer", href: "#" },
-        { label: "Page Title", href: "#" },
-        { label: "Menus", href: "#" },
-        { label: "Sidebar", href: "#" },
-        { label: "Footer", href: "#" },
-      ],
-    },
-    {
-      title: "Pages",
-      links: [
-        { label: "Homepage", href: "#" },
-        { label: "Users", href: "#" },
-        { label: "Tools", href: "#" },
-        { label: "Settings", href: "#" },
-      ],
-    },
-    {
-      title: "Misc",
-      links: [
-        { label: "Tutorials", href: "#" },
-        { label: "Changelog", href: "#" },
-      ],
-    },
-    {
-      title: "Getting Started",
-      links: [
-        { label: "Installation", href: "#" },
-        { label: "Plugins", href: "#" },
-        { label: "Migrations", href: "#" },
-        { label: "Appearance", href: "#" },
-        { label: "Mamba UI", href: "#" },
-      ],
-    },
-    {
-      title: "Dashboard",
-      links: [
-        { label: "Header", href: "#" },
-        { label: "Drawer", href: "#" },
-        { label: "Page Title", href: "#" },
-        { label: "Menus", href: "#" },
-        { label: "Sidebar", href: "#" },
-        { label: "Footer", href: "#" },
-      ],
-    },
-    {
-      title: "Pages",
-      links: [
-        { label: "Homepage", href: "#" },
-        { label: "Users", href: "#" },
-        { label: "Tools", href: "#" },
-        { label: "Settings", href: "#" },
-      ],
-    },
-    {
-      title: "Misc",
-      links: [
-        { label: "Tutorials", href: "#" },
-        { label: "Changelog", href: "#" },
+        { label: "Percentage Calculator", href: "/mathematics/percentage-calculator" },
+        { label: "Age Calculator", href: "/mathematics/age-calculator" },
+        { label: "Factorial Calculator", href: "/mathematics/factorial-calculator" },
       ],
     },
   ];
@@ -98,7 +44,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <div className="p-5 h-[calc(100vh-5rem)] fixed top-20 left-0 w-full ">
+      <div className="p-5 h-[calc(100vh-5rem)] fixed top-20 left-0 w-full sm:w-auto">
         <aside
           className={` ${
             isSidebarOpen ? " inset-y-0 w-full opacity-100" : " w-0 opacity-0"
