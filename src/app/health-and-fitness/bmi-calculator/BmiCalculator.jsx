@@ -19,7 +19,7 @@ const BmiCalculator = () => {
 
   const changeHeightMetric = (metric) => {
     if (heightMetric === metric) return;
-    if (!height) {
+    if (height) {
       metric === "cm" ? setHeight(feetToCm(height)) : setHeight(cmToFeet(height));
     }
     setHeightMetric(metric);
