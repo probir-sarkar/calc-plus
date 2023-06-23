@@ -51,8 +51,8 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`py-5 sm:px-5 h-[calc(100vh-5rem)] fixed top-20 left-0 sm:w-auto ease-liner duration-300 overflow-hidden ${
-          isSidebarOpen ? "w-full px-5" : "w-0"
+        className={`py-5 sm:px-5 h-[calc(100vh-5rem)] fixed top-20 sm:left-0 sm:w-auto ease-liner duration-300 overflow-hidden ${
+          isSidebarOpen ? "w-full px-5 left-0" : "left-[-100%]"
         }`}
       >
         <div
