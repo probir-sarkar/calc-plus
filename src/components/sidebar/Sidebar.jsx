@@ -30,6 +30,12 @@ const Sidebar = () => {
   ];
   return (
     <>
+      <div
+        className={`sm:hidden ${
+          isSidebarOpen ? "fixed top-0 left-0 right-0 bottom-0 bg-purple-700 opacity-10" : " "
+        }`}
+        onClick={() => setIsSidebarOpen(false)}
+      ></div>
       {/* Top Nav Bar */}
       <div className="h-20  fixed top-0 left-0 w-full flex items-center px-5">
         <div className="flex justify-between items-center h-16 w-full bg-purple-700 text-white px-5 rounded-2xl drop-shadow-xl border border-gray-500  ">
@@ -44,21 +50,23 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar */}
-      <div className="p-5 h-[calc(100vh-5rem)] fixed top-20 left-0 w-full sm:w-auto">
-        <aside
-          className={` ${
-            isSidebarOpen ? " inset-y-0 w-full opacity-100" : " w-0 opacity-0"
-          } h-full sm:w-80 scroll-bar ease-liner duration-300 sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50`}
+      <aside
+        className={`px-5 py-5 sm:px-5 h-[calc(100vh-5rem)] fixed top-20 left-0 sm:w-auto ease-liner duration-300 overflow-hidden ${
+          isSidebarOpen ? "w-full" : "w-0 px-0"
+        }`}
+      >
+        <div
+          className={`h-full sm:w-80 scroll-bar sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50`}
         >
           <div className="h-full overflow-y-auto scroll-bar">
             {sidebarData.map((section, index) => (
-              <div className="space-y-2 p-5 " key={index}>
-                <h2 className="text-sm text-gray-500 font-extrabold uppercase ">{section.title}</h2>
-                <div className="flex flex-col ">
+              <div className="space-y-2 p-5" key={index}>
+                <h2 className="text-sm text-gray-500 font-extrabold uppercase">{section.title}</h2>
+                <div className="flex flex-col">
                   {section.links.map((link, index) => (
                     <a
                       rel="noopener noreferrer"
-                      className="text-lg font-medium py-3"
+                      className="text-lg font-medium py-3 display-block text-gray-700 hover:text-purple-700"
                       href={link.href}
                       key={index}
                     >
@@ -69,8 +77,8 @@ const Sidebar = () => {
               </div>
             ))}
           </div>
-        </aside>
-      </div>
+        </div>
+      </aside>
     </>
   );
 };
