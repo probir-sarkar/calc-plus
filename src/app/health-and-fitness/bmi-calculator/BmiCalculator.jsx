@@ -5,17 +5,17 @@ import PieChartWithNeedle from "../../../components/charts/PieChartWithNeedle/in
 const BmiCalculator = () => {
   const [weightMetric, setWeightMetric] = useState("kg");
   const [heightMetric, setHeightMetric] = useState("cm");
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState();
+  const [height, setHeight] = useState();
   const [bmi, setBmi] = useState(0);
 
   const changeWeightMetric = (metric) => {
-    if (weightMetric === metric) return;
+    if (weightMetric === metric || !weight) return;
     metric === "kg" ? setWeight(lbsToKg(weight)) : setWeight(kgToLbs(weight));
     setWeightMetric(metric);
   };
   const changeHeightMetric = (metric) => {
-    if (heightMetric === metric) return;
+    if (heightMetric === metric || !height) return;
     metric === "cm" ? setHeight(feetToCm(height)) : setHeight(cmToFeet(height));
     setHeightMetric(metric);
   };
