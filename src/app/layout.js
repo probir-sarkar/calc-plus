@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeContextProvider>
           <Sidebar />
-          <div className="main w-10/12">{children}</div>
+          <div className="main w-4/5">{children}</div>
         </ThemeContextProvider>
       </body>
     </html>

@@ -5,19 +5,20 @@ import { PieChart, Pie, Cell } from "recharts";
 
 const RADIAN = Math.PI / 180;
 const data = [
-  { name: "Underweight", value: 18.5, color: "#20a8e1" },
-  { name: "Normal weight", value: 6.4, color: "#3bb54a" },
-  { name: "Overweight", value: 5, color: "#f6ec30" },
-  { name: "Obesity", value: 25, color: "#f6ec30" },
-  { name: "Morbidly Obese", value: 25, color: "#ee2028" },
+  { name: "Underweight", value: 8.5, color: "blue" },
+  { name: "Normal weight", value: 6.4, color: "green" },
+  { name: "Overweight", value: 5, color: "yellow" },
+  { name: "Obesity", value: 5, color: "red" },
 ];
 const cx = 150;
 const cy = 200;
 const iR = 50;
 const oR = 100;
-const value = 29;
 
-const PieChartWithNeedle = () => {
+const PieChartWithNeedle = ({ bmi }) => {
+  let value = bmi - 10;
+  if (value < 0) value = 0;
+  if (value > 24.8) value = 24.8;
   const needle = (value, data, cx, cy, iR, oR, color) => {
     let total = 0;
     data.forEach((v) => {
@@ -50,7 +51,7 @@ const PieChartWithNeedle = () => {
   };
 
   return (
-    <PieChart width={400} height={500}>
+    <PieChart width={300} height={250} className="z-[-1]">
       <Pie
         dataKey="value"
         startAngle={180}

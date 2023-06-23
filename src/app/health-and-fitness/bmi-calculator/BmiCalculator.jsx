@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { kgToLbs, lbsToKg, feetToCm, cmToFeet } from "@/utils/generalMaths";
-import PieChartWithNeedle from "../../../components/charts/PieChartWithNeedle/index";
+import PieChartWithNeedle from "@/components/charts/PieChartWithNeedle";
+import BmiMessage from "./BmiMessage";
 const BmiCalculator = () => {
   const [weightMetric, setWeightMetric] = useState("kg");
   const [heightMetric, setHeightMetric] = useState("cm");
@@ -24,9 +25,24 @@ const BmiCalculator = () => {
     }
     setHeightMetric(metric);
   };
+  const calculateBMI = (e) => {
+    e.preventDefault();
+    if (!weight || !height) return;
+    const weightInKg = weightMetric === "kg" ? weight : lbsToKg(weight);
+    const heightInCm = heightMetric === "cm" ? height : feetToCm(height);
+    const bmi = weightInKg / ((heightInCm / 100) * (heightInCm / 100));
+    setBmi(bmi);
+  };
+
   return (
-    <>
-      <form>
+    <div className="flex w-full">
+      <div className="">
+        <PieChartWithNeedle bmi={bmi} />
+        <div className="">
+          <BmiMessage bmi={bmi} />
+        </div>
+      </div>
+      <form className="w-3/5">
         <div className="mb-4">
           <label
             className="text-gray-700 font-bold mb-2 flex justify-between items-center"
@@ -104,12 +120,13 @@ const BmiCalculator = () => {
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
             type="submit"
+            onClick={calculateBMI}
           >
             Calculate BMI
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

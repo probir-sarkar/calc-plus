@@ -6,7 +6,7 @@ import { useThemeContext } from "../context/theme";
 export default function Home() {
   const { isSidebarOpen, toggleSidebar, setSidebarOpen } = useThemeContext();
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="">
       {/* title */}
       <div className="">
         <h1 className="text-2xl font-bold ">Dashboard</h1>
