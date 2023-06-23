@@ -35,7 +35,7 @@ const BmiCalculator = () => {
   };
 
   return (
-    <div className="flex w-full">
+    <div className="sm:flex w-full">
       <div className="">
         <PieChartWithNeedle bmi={bmi} />
         <div className="">
