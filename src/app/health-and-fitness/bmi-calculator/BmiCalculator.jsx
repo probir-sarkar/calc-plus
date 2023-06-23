@@ -10,13 +10,18 @@ const BmiCalculator = () => {
   const [bmi, setBmi] = useState(0);
 
   const changeWeightMetric = (metric) => {
-    if (weightMetric === metric || !weight) return;
-    metric === "kg" ? setWeight(lbsToKg(weight)) : setWeight(kgToLbs(weight));
+    if (weightMetric === metric) return;
+    if (weight) {
+      metric === "kg" ? setWeight(lbsToKg(weight)) : setWeight(kgToLbs(weight));
+    }
     setWeightMetric(metric);
   };
+
   const changeHeightMetric = (metric) => {
-    if (heightMetric === metric || !height) return;
-    metric === "cm" ? setHeight(feetToCm(height)) : setHeight(cmToFeet(height));
+    if (heightMetric === metric) return;
+    if (!height) {
+      metric === "cm" ? setHeight(feetToCm(height)) : setHeight(cmToFeet(height));
+    }
     setHeightMetric(metric);
   };
   return (
