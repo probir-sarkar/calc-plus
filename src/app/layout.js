@@ -20,9 +20,7 @@ export default function RootLayout({ children }) {
           content="-0zKqJyIP-rNZxgf8aJRubOn3bd5ClI8QHdN07ZycwI"
         />
       </head>
-      <body
-        className={`${font.className} bg-slate-50  sm:ml-80 mt-16 text-gray-700 flex justify-center py-10`}
-      >
+      <body className={`${font.className}   sm:ml-80 mt-16 text-black flex justify-center py-10`}>
         <ThemeContextProvider>
           <Sidebar />
           <div className="main w-4/5">{children}</div>

@@ -19,6 +19,7 @@ const PieChartWithNeedle = ({ bmi }) => {
   let value = bmi - 10;
   if (value < 0) value = 0;
   if (value > 24.8) value = 24.8;
+
   const needle = (value, data, cx, cy, iR, oR, color) => {
     let total = 0;
     data.forEach((v) => {

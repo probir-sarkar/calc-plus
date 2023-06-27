@@ -3,6 +3,8 @@ import { useState } from "react";
 import { kgToLbs, lbsToKg, feetToCm, cmToFeet } from "@/utils/generalMaths";
 import PieChartWithNeedle from "@/components/charts/PieChartWithNeedle";
 import BmiMessage from "./BmiMessage";
+import Button from "@/components/ui/Button";
+import ProgressBar from "@/components/ProgressBar";
 const BmiCalculator = () => {
   const [weightMetric, setWeightMetric] = useState("kg");
   const [heightMetric, setHeightMetric] = useState("cm");
@@ -31,23 +33,15 @@ const BmiCalculator = () => {
     const weightInKg = weightMetric === "kg" ? weight : lbsToKg(weight);
     const heightInCm = heightMetric === "cm" ? height : feetToCm(height);
     const bmi = weightInKg / ((heightInCm / 100) * (heightInCm / 100));
+    console.log(bmi);
     setBmi(bmi);
   };
 
   return (
-    <div className="sm:flex w-full">
-      <div className="">
-        <PieChartWithNeedle bmi={bmi} />
-        <div className="">
-          <BmiMessage bmi={bmi} />
-        </div>
-      </div>
-      <form className="w-3/5">
+    <div className="sm:grid grid-cols-5 gap-4 items-center w-full p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 ">
+      <form className="col-span-3">
         <div className="mb-4">
-          <label
-            className="text-gray-700 font-bold mb-2 flex justify-between items-center"
-            htmlFor="weight"
-          >
+          <div className="text-gray-700 font-bold mb-2 flex justify-between items-center">
             Weight ({weightMetric}):
             <div className="inline-flex m-2 cursor-pointer">
               <div
@@ -67,7 +61,7 @@ const BmiCalculator = () => {
                 lb
               </div>
             </div>
-          </label>
+          </div>
 
           <input
             className="w-full px-3 py-2 border border-gray-300 rounded"
@@ -81,10 +75,7 @@ const BmiCalculator = () => {
         </div>
 
         <div className="mb-4">
-          <label
-            className="text-gray-700 font-bold mb-2 flex justify-between items-center"
-            htmlFor="height"
-          >
+          <div className="text-gray-700 font-bold mb-2 flex justify-between items-center">
             Height ({heightMetric}):
             <div className="inline-flex m-2 cursor-pointer">
               <div
@@ -104,7 +95,7 @@ const BmiCalculator = () => {
                 ft
               </div>
             </div>
-          </label>
+          </div>
 
           <input
             className="w-full px-3 py-2 border border-gray-300 rounded"
@@ -117,15 +108,18 @@ const BmiCalculator = () => {
         </div>
 
         <div className="text-center">
-          <button
+          <Button
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
             type="submit"
             onClick={calculateBMI}
           >
             Calculate BMI
-          </button>
+          </Button>
         </div>
       </form>
+      <div className="h-full col-span-2 sm:mt-0 mt-4">
+        <BmiMessage bmi={bmi} />
+      </div>
     </div>
   );
 };

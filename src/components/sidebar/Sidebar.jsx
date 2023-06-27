@@ -29,7 +29,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <>
+    <div className="z-20">
       <div
         className={`sm:hidden ${
           isSidebarOpen ? "fixed top-0 left-0 right-0 bottom-0 bg-purple-700 opacity-10" : " "
@@ -56,7 +56,7 @@ const Sidebar = () => {
         }`}
       >
         <div
-          className={`h-full sm:w-80 scroll-bar sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50`}
+          className={`h-full sm:w-80 scroll-bar sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border-2 border-black `}
         >
           <div className="h-full overflow-y-auto scroll-bar">
             {sidebarData.map((section, index) => (
@@ -79,7 +79,7 @@ const Sidebar = () => {
           </div>
         </div>
       </aside>
-    </>
+    </div>
   );
 };
 
