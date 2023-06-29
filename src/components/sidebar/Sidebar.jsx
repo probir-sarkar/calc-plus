@@ -37,12 +37,12 @@ const Sidebar = () => {
   ];
   return (
     <div className="z-20">
-      <div
+      {/* <div
         className={`sm:hidden ${
           isSidebarOpen ? "fixed top-0 left-0 right-0 bottom-0 bg-purple-700 opacity-10" : " "
         }`}
         onClick={() => setIsSidebarOpen(false)}
-      ></div>
+      ></div> */}
       {/* Top Nav Bar */}
       <div className="h-20  fixed top-0 left-0 w-full flex items-center px-5">
         <div className="flex justify-between items-center h-16 w-full bg-purple-700 text-white px-5 rounded-2xl drop-shadow-xl border border-gray-500  ">
@@ -58,7 +58,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`py-5 sm:px-5 h-[calc(100vh-5rem)] fixed top-20 sm:left-0 sm:w-auto ease-liner duration-500 overflow-hidden ${
+        className={`py-5 sm:px-5 h-[calc(100dvh-5rem)] fixed top-20 sm:left-0 sm:w-auto ease-liner duration-500 overflow-hidden ${
           isSidebarOpen ? "w-full px-5 left-0" : "left-[-100%]"
         }`}
       >

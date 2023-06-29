@@ -59,8 +59,8 @@ function UnitConverter() {
   return (
     <>
       <h1 className="text-3xl font-bold mb-4">Length Converter</h1>
-      <div class="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-4 sm:flex items-center">
-        <div className="sm:w-3/5 space-y-4">
+      <div class="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-4 lg:flex">
+        <div className="lg:w-3/5 space-y-4">
           <div className="">
             {/* from unit (kg) title */}
             <p className="text-xl mb-4"> From ({unit1})</p>
@@ -109,7 +109,7 @@ function UnitConverter() {
             </div>
           </div>
         </div>
-        <div className="bg-gray-200 p-4 rounded-lg sm:w-2/5">
+        <div className="bg-gray-200 p-4 rounded-lg lg:w-2/5">
           <p className="text-xl font-bold mb-2">Conversion Result:</p>
           <p className="text-lg">
             {input1 && (
