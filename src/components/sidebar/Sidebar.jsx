@@ -12,6 +12,13 @@ const Sidebar = () => {
       links: [{ label: "BMI Calculator", href: "/health-and-fitness/bmi-calculator" }],
     },
     {
+      title: "Unit Converters",
+      links: [
+        { label: "Length", href: "/unit-converters/length" },
+        { label: "Area", href: "/unit-converters/area" },
+      ],
+    },
+    {
       title: "Finance",
       links: [
         { label: "EMI Calculator", href: "/finance/emi-calculator" },
