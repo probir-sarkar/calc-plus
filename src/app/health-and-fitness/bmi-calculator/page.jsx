@@ -18,11 +18,11 @@ const BmiCalculatorPage = () => {
         <ol className="list-decimal ml-6 mb-8">
           <li className="mb-2">
             <strong>What is BMI?</strong> - BMI stands for Body Mass Index, which is a numerical
-            value calculated using a person's weight and height. It is commonly used as a screening
-            tool to assess whether an individual has a healthy body weight.
+            value calculated using a person&apos;s weight and height. It is commonly used as a
+            screening tool to assess whether an individual has a healthy body weight.
           </li>
           <li className="mb-2">
-            <strong>How is BMI calculated?</strong> - BMI is calculated by dividing a person's
+            <strong>How is BMI calculated?</strong> - BMI is calculated by dividing a person&apos;s
             weight in kilograms by the square of their height in meters. The formula is: BMI =
             weight (kg) / (height (m))^2.
           </li>
@@ -46,14 +46,14 @@ const BmiCalculatorPage = () => {
             <strong>Health Risks Associated with BMI:</strong> - Both low and high BMI values can be
             associated with health risks. Being underweight or overweight can increase the risk of
             certain health conditions, such as cardiovascular disease, diabetes, and musculoskeletal
-            issues. However, it's important to note that BMI is just one indicator and should be
-            considered in conjunction with other health assessments.
+            issues. However, it&apos;s important to note that BMI is just one indicator and should
+            be considered in conjunction with other health assessments.
           </li>
           <li className="mb-2">
             <strong>Healthy Lifestyle:</strong> - Maintaining a healthy body weight is important for
-            overall well-being. It's recommended to focus on adopting a balanced diet, engaging in
-            regular physical activity, and seeking professional guidance to develop a personalized
-            approach to health and fitness.
+            overall well-being. It&apos;s recommended to focus on adopting a balanced diet, engaging
+            in regular physical activity, and seeking professional guidance to develop a
+            personalized approach to health and fitness.
           </li>
         </ol>
 
