@@ -1,16 +1,13 @@
 "use client";
 import { useState } from "react";
 import { kgToLbs, lbsToKg, feetToCm, cmToFeet } from "@/utils/generalMaths";
-import PieChartWithNeedle from "@/components/charts/PieChartWithNeedle";
 import BmiMessage from "./BmiMessage";
-import Button from "@/components/ui/Button";
-import ProgressBar from "@/components/ProgressBar";
 const BmiCalculator = () => {
   const [weightMetric, setWeightMetric] = useState("kg");
   const [heightMetric, setHeightMetric] = useState("cm");
   const [weight, setWeight] = useState();
   const [height, setHeight] = useState();
-  const [bmi, setBmi] = useState(0);
+  const [bmi, setBmi] = useState();
 
   const changeWeightMetric = (metric) => {
     if (weightMetric === metric) return;
@@ -39,7 +36,7 @@ const BmiCalculator = () => {
 
   return (
     <div className="sm:grid grid-cols-5 gap-4 items-center w-full p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 ">
-      <form className="col-span-3">
+      <form className="col-span-3" onSubmit={calculateBMI}>
         <div className="mb-4">
           <div className="text-gray-700 font-bold mb-2 flex justify-between items-center">
             Weight ({weightMetric}):
@@ -69,8 +66,11 @@ const BmiCalculator = () => {
             type="number"
             placeholder="Enter weight"
             required
+            max={weightMetric == "kg" ? 635 : 1400}
+            min={0}
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
+            step="any"
           />
         </div>
 
@@ -102,19 +102,20 @@ const BmiCalculator = () => {
             id="height"
             type="number"
             placeholder="Enter height"
+            max={weightMetric == "cm" ? 275 : 9}
+            min={0}
             onChange={(e) => setHeight(e.target.value)}
             value={height}
+            step="any"
           />
         </div>
 
         <div className="text-center">
-          <Button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          <input
+            className="bg-white text-purple-700 border-2 hover:bg-purple-700 hover:text-white cursor-pointer font-bold py-2 px-4 rounded ease-in-out duration-300"
             type="submit"
-            onClick={calculateBMI}
-          >
-            Calculate BMI
-          </Button>
+            value="Calculate BMI"
+          />
         </div>
       </form>
       <div className="h-full col-span-2 sm:mt-0 mt-4">

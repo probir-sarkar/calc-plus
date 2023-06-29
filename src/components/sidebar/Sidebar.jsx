@@ -56,7 +56,7 @@ const Sidebar = () => {
         }`}
       >
         <div
-          className={`h-full sm:w-80 scroll-bar sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border-2 border-black `}
+          className={`h-full sm:w-80 scroll-bar sm:opacity-100 p-5 pr-2 rounded-2xl drop-shadow-xl border-2 border-black bg-white `}
         >
           <div className="h-full overflow-y-auto scroll-bar">
             {sidebarData.map((section, index) => (
