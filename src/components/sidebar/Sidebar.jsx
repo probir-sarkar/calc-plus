@@ -39,7 +39,7 @@ const Sidebar = () => {
       {/* Top Nav Bar */}
       <div className="h-20  fixed top-0 left-0 w-full flex items-center px-5">
         <div className="flex justify-between items-center h-16 w-full bg-purple-700 text-white px-5 rounded-2xl drop-shadow-xl border border-gray-500  ">
-          <h1 className="text-2xl font-bold tracking-widest uppercase">CalcPlus</h1>
+          <p className="text-2xl font-bold tracking-widest uppercase">CalcPlus</p>
           <button
             className="text-4xl font-bold tracking-widest uppercase d-none sm:hidden block "
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}

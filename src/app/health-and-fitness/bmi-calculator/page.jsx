@@ -3,7 +3,7 @@ const BmiCalculatorPage = () => {
   return (
     <>
       <div className="">
-        <h2 className="text-2xl sm:text-4xl font-bold mb-4">BMI Calculator</h2>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-4">BMI Calculator</h1>
         <BmiCalculator />
       </div>
       <div className="text-gray-700 mt-10">

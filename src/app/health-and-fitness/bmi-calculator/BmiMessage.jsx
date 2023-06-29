@@ -42,7 +42,7 @@ const BmiMessage = ({ bmi }) => {
       className={`mb-4 h-full rounded-lg ${message.bg} px-6 py-5 text-base ${message.color}`}
       role="alert"
     >
-      <h4 className="mb-2 text-2xl font-medium leading-tight">{message.bmi}</h4>
+      <p className="mb-2 text-2xl font-medium leading-tight">{message.bmi}</p>
       <p className="mb-4">{message.sub}</p>
       <hr className="border-success-600 opacity-30" />
     </div>

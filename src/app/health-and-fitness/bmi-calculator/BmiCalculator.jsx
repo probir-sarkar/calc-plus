@@ -102,6 +102,7 @@ const BmiCalculator = () => {
             id="height"
             type="number"
             placeholder="Enter height"
+            required
             max={heightMetric == "cm" ? 275 : 9}
             min={0}
             onChange={(e) => setHeight(e.target.value)}
