@@ -59,9 +59,7 @@ const BmiCalculatorPage = () => {
 
         <p className="text-sm">
           Remember, the information provided here is general in nature and should not replace
-          personalized advice from a healthcare professional. Encourage your website visitors to
-          consult with a qualified healthcare provider for specific guidance regarding their
-          individual health and wellness.
+          personalized advice from a healthcare professional.
         </p>
       </div>
     </>
