@@ -31,8 +31,8 @@ const convertLength = (value, from, to) => {
 function UnitConverter() {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
-  const [unit1, setUnit1] = useState("");
-  const [unit2, setUnit2] = useState("");
+  const [unit1, setUnit1] = useState("mm");
+  const [unit2, setUnit2] = useState("mm");
 
   const handleInput1Change = (e) => {
     setInput1(e.target.value);
@@ -58,7 +58,7 @@ function UnitConverter() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center">Unit Converter</h1>
+      <h1 className="text-3xl font-bold mb-4">Unit Converter</h1>
       <div class="w-full p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-5">
         <div className="">
           {/* from unit (kg) title */}
