@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="-0zKqJyIP-rNZxgf8aJRubOn3bd5ClI8QHdN07ZycwI"
         />
-        <link rel="apple-touch-icon" href="/icon.png"></link>
         <meta name="theme-color" content="#7e22ce" />
       </head>
       <body
