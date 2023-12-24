@@ -23,10 +23,12 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/icon.png"></link>
         <meta name="theme-color" content="#7e22ce" />
       </head>
-      <body className={`${font.className}   sm:ml-80 mt-16 text-black flex justify-center py-10`}>
+      <body
+        className={`${font.className}   sm:ml-80 mt-16 text-black flex justify-center py-10`}
+      >
         <ThemeContextProvider>
           <Sidebar />
-          <div className="main w-4/5">{children}</div>
+          <main className="main sm:w-4/5 w-10/12">{children}</main>
         </ThemeContextProvider>
       </body>
     </html>
