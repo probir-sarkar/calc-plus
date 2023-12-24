@@ -28,6 +28,7 @@ const Sidebar = () => {
           <button
             className="text-4xl font-bold tracking-widest uppercase d-none sm:hidden block "
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            aria-label="Toggle Sidebar"
           >
             {isSidebarOpen ? <HiOutlineXMark /> : <HiBars3 />}
           </button>
