@@ -15,18 +15,15 @@ const MasonryCards = () => {
 export default MasonryCards;
 
 const Card = ({ label, href, details, index }) => {
-  const isOdd = index % 2 === 0;
-  const className = isOdd ? "bg-purple-700 text-white " : "bg-gray-50  ";
   return (
     <Link
       href={href}
-      className={`p-2 rounded-md border-2 border-purple-700   transition-all duration-200 ${className} `}
+      className={`p-2 rounded-md border-2 border-gray-200 hover:border-purple-700 min-h-[15rem]  transition-all duration-200 `}
     >
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{label}</div>
         <p className=" text-base">{details}</p>
       </div>
-      <div className="px-6 py-4"></div>
     </Link>
   );
 };

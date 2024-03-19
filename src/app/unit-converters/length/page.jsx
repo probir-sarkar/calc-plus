@@ -59,24 +59,20 @@ function UnitConverter() {
   return (
     <main>
       <h1 className="text-3xl font-bold mb-4">Length Converter</h1>
-      <div class="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-4 lg:flex">
+      <div className="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-4 lg:flex">
         <div className="lg:w-3/5 space-y-4">
           <div className="">
             {/* from unit (kg) title */}
             <p className="text-xl mb-4"> From ({unit1})</p>
             <div className="flex md:flex-row flex-col-reverse gap-2">
               <input
-                class="border border-gray-300 rounded p-2"
+                className="border border-gray-300 rounded p-2"
                 type="number"
                 value={input1}
                 onChange={handleInput1Change}
               />
 
-              <select
-                class="border border-gray-300 rounded p-2"
-                value={unit1}
-                onChange={handleUnit1Change}
-              >
+              <select className="border border-gray-300 rounded p-2" value={unit1} onChange={handleUnit1Change}>
                 {lengthUnits.map((unit) => (
                   <option key={unit.value} value={unit.value}>
                     {unit.label}
@@ -89,17 +85,13 @@ function UnitConverter() {
             <p className="text-xl mb-4"> To ({unit2})</p>
             <div className="flex md:flex-row flex-col-reverse gap-2">
               <input
-                class="border border-gray-300 rounded p-2"
+                className="border border-gray-300 rounded p-2"
                 type="number"
                 value={input2}
                 onChange={handleInput2Change}
               />
 
-              <select
-                class="border border-gray-300 rounded p-2"
-                value={unit2}
-                onChange={handleUnit2Change}
-              >
+              <select className="border border-gray-300 rounded p-2" value={unit2} onChange={handleUnit2Change}>
                 {lengthUnits.map((unit) => (
                   <option key={unit.value} value={unit.value}>
                     {unit.label}
@@ -114,8 +106,7 @@ function UnitConverter() {
           <p className="text-lg">
             {input1 && (
               <span>
-                {input1} <span className="text-gray-600">({unit1})</span> is
-                equal to {input2}{" "}
+                {input1} <span className="text-gray-600">({unit1})</span> is equal to {input2}{" "}
                 <span className="text-gray-600">({unit2})</span>
               </span>
             )}
@@ -126,52 +117,41 @@ function UnitConverter() {
         <h2 className="text-2xl font-bold mb-4">Features and Functionality:</h2>
         <ol className="list-decimal ml-6 mb-8">
           <li className="mb-2">
-            <strong>Comprehensive Length Conversion:</strong> - CalcPlus&apos;s
-            Length Converter covers a wide range of commonly used length units,
-            including inches, feet, yards, meters, centimeters, millimeters, and
-            kilometers. Enjoy the flexibility of converting between any
-            combination of units effortlessly.
+            <strong>Comprehensive Length Conversion:</strong> - CalcPlus&apos;s Length Converter covers a wide range of
+            commonly used length units, including inches, feet, yards, meters, centimeters, millimeters, and kilometers.
+            Enjoy the flexibility of converting between any combination of units effortlessly.
           </li>
           <li className="mb-2">
-            <strong>User-Friendly Interface:</strong> - The Length Converter on
-            CalcPlus features a user-friendly interface designed for easy
-            navigation and seamless conversion. Enter your measurement in one
-            unit, select the desired output unit, and receive the precise
-            conversion instantly.
+            <strong>User-Friendly Interface:</strong> - The Length Converter on CalcPlus features a user-friendly
+            interface designed for easy navigation and seamless conversion. Enter your measurement in one unit, select
+            the desired output unit, and receive the precise conversion instantly.
           </li>
           <li className="mb-2">
-            <strong>Real-Time Conversion:</strong> - Experience real-time
-            conversion as you input values into the length converter. Watch as
-            the tool updates the conversion instantly, allowing you to
-            experiment with different measurements and units.
+            <strong>Real-Time Conversion:</strong> - Experience real-time conversion as you input values into the length
+            converter. Watch as the tool updates the conversion instantly, allowing you to experiment with different
+            measurements and units.
           </li>
           <li className="mb-2">
-            <strong>Flexible Decimal Precision:</strong> - Customize your length
-            conversion results with CalcPlus. Choose from different decimal
-            precision options, such as two decimal places, four decimal places,
-            or rounded-off results, to match your specific needs.
+            <strong>Flexible Decimal Precision:</strong> - Customize your length conversion results with CalcPlus.
+            Choose from different decimal precision options, such as two decimal places, four decimal places, or
+            rounded-off results, to match your specific needs.
           </li>
           <li className="mb-2">
-            <strong>Mobile-Friendly Design:</strong> - Access CalcPlus&apos;s
-            Length Converter seamlessly from any device, including smartphones,
-            tablets, and desktops. Our responsive design ensures a consistent
-            and user-friendly experience, regardless of the screen size or
-            platform.
+            <strong>Mobile-Friendly Design:</strong> - Access CalcPlus&apos;s Length Converter seamlessly from any
+            device, including smartphones, tablets, and desktops. Our responsive design ensures a consistent and
+            user-friendly experience, regardless of the screen size or platform.
           </li>
           <li className="mb-2">
-            <strong>Time-Saving and Convenient: </strong> - CalcPlus&apos;s
-            Length Converter saves you valuable time by eliminating the need for
-            manual calculations. Get accurate length conversions within seconds,
-            freeing you to focus on other important tasks.
+            <strong>Time-Saving and Convenient: </strong> - CalcPlus&apos;s Length Converter saves you valuable time by
+            eliminating the need for manual calculations. Get accurate length conversions within seconds, freeing you to
+            focus on other important tasks.
           </li>
         </ol>
         <p className="text-sm mt-4">
-          <strong>Disclaimer:</strong> Please note that CalcPlus&apos;s Length
-          Converter is for informational purposes only and should not be used as
-          a substitute for professional measurement or engineering advice.
-          Always verify the accuracy and appropriateness of the conversions for
-          your specific needs. CalcPlus does not take responsibility for any
-          inaccuracies or errors in the conversions provided by the tool.
+          <strong>Disclaimer:</strong> Please note that CalcPlus&apos;s Length Converter is for informational purposes
+          only and should not be used as a substitute for professional measurement or engineering advice. Always verify
+          the accuracy and appropriateness of the conversions for your specific needs. CalcPlus does not take
+          responsibility for any inaccuracies or errors in the conversions provided by the tool.
         </p>
       </div>
     </main>

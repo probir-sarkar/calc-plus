@@ -19,10 +19,7 @@ const Sidebar = () => {
       {/* Top Nav Bar */}
       <div className="h-20  fixed top-0 left-0 w-full flex items-center px-5">
         <div className="flex justify-between items-center h-16 w-full bg-purple-700 text-white px-5 rounded-2xl drop-shadow-xl border border-gray-500  ">
-          <Link
-            href="/"
-            className="text-2xl font-bold tracking-widest uppercase"
-          >
+          <Link href="/" className="text-2xl font-bold tracking-widest uppercase">
             CalcPlus
           </Link>
           <button
@@ -47,9 +44,7 @@ const Sidebar = () => {
           <div className="h-full overflow-y-auto scroll-bar">
             {sidebarData.map((section, index) => (
               <div className="space-y-2 p-5" key={index}>
-                <h2 className="text-sm text-gray-500 font-extrabold uppercase">
-                  {section.title}
-                </h2>
+                <h2 className="text-sm text-gray-500 font-extrabold uppercase">{section.title}</h2>
                 <div className="flex flex-col">
                   {section.links.map((link, index) => (
                     <a

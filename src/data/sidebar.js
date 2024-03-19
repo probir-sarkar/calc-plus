@@ -39,8 +39,7 @@ export const sidebarData = [
       {
         label: "GST Calculator",
         href: "/finance/gst-calculator",
-        details:
-          "Calculate the GST amount and the net price of a product or service based on the GST rate.",
+        details: "Calculate the GST amount and the net price of a product or service based on the GST rate.",
       },
       {
         label: "FD Calculator",
@@ -56,8 +55,7 @@ export const sidebarData = [
       {
         label: "Percentage Calculator",
         href: "/mathematics/percentage-calculator",
-        details:
-          "Calculate the percentage of a number or the percentage change between two numbers.",
+        details: "Calculate the percentage of a number or the percentage change between two numbers.",
       },
       {
         label: "Age Calculator",
