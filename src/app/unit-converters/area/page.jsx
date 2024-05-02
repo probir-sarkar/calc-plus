@@ -10,7 +10,7 @@ const areaUnits = [
   { label: "Square Foot (ft²)", value: "ft²", factor: 0.092903 },
   { label: "Square Yard (yd²)", value: "yd²", factor: 0.836127 },
   { label: "Acre", value: "acre", factor: 4046.86 },
-  { label: "Hectare", value: "hectare", factor: 10000 },
+  { label: "Hectare", value: "hectare", factor: 10000 }
 ];
 
 const convertArea = (value, from, to) => {
@@ -50,17 +50,12 @@ function AreaCalculator() {
   return (
     <>
       <h1 className="text-3xl font-bold mb-4">Area Calculator</h1>
-      <div className="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 space-y-4 lg:flex">
+      <div className="w-full  sm:p-10 p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 dark:bg-slate-900 space-y-4 lg:flex">
         <div className="lg:w-3/5 space-y-4">
           <div className="">
             <p className="text-xl mb-4"> From ({unit1})</p>
             <div className="flex md:flex-row flex-col-reverse gap-2">
-              <input
-                className="border border-gray-300 rounded p-2"
-                type="number"
-                value={input1}
-                onChange={handleInput1Change}
-              />
+              <input className="border border-gray-300 rounded p-2" type="number" value={input1} onChange={handleInput1Change} />
               <select className="border border-gray-300 rounded p-2" value={unit1} onChange={handleUnit1Change}>
                 {areaUnits.map((unit) => (
                   <option key={unit.value} value={unit.value}>
@@ -73,12 +68,7 @@ function AreaCalculator() {
           <div className=" ">
             <p className="text-xl mb-4"> To ({unit2})</p>
             <div className="flex md:flex-row flex-col-reverse gap-2">
-              <input
-                className="border border-gray-300 rounded p-2"
-                type="number"
-                value={input2}
-                onChange={handleInput2Change}
-              />
+              <input className="border border-gray-300 rounded p-2" type="number" value={input2} onChange={handleInput2Change} />
               <select className="border border-gray-300 rounded p-2" value={unit2} onChange={handleUnit2Change}>
                 {areaUnits.map((unit) => (
                   <option key={unit.value} value={unit.value}>
@@ -89,59 +79,50 @@ function AreaCalculator() {
             </div>
           </div>
         </div>
-        <div className="bg-gray-200 p-4 rounded-lg lg:w-2/5">
+        <div className="bg-gray-200 p-4 rounded-lg lg:w-2/5 text-gray-700">
           <p className="text-xl font-bold mb-2">Conversion Result:</p>
           <p className="text-lg">
             {input1 && (
               <span>
-                {input1} <span className="text-gray-600">({unit1})</span> is equal to {input2}{" "}
-                <span className="text-gray-600">({unit2})</span>
+                {input1} ({unit1}) is equal to {input2} ({unit2})
               </span>
             )}
           </p>
         </div>
       </div>
       {/* Additional content or features specific to the area calculator */}
-      <div className="text-gray-700 mt-10">
+      <div className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Features and Functionality:</h2>
         <ol className="list-decimal ml-6 mb-8">
           <li className="mb-2">
-            <strong>Comprehensive Area Conversion:</strong> - CalcPlus&apos;s Area Converter covers a wide range of
-            commonly used area units, including square meters, square kilometers, square feet, square yards, square
-            inches, acres, and hectares. Enjoy the flexibility of converting between any combination of area units
-            effortlessly.
+            <strong>Comprehensive Area Conversion:</strong> - CalcPlus&apos;s Area Converter covers a wide range of commonly used area units, including square meters, square
+            kilometers, square feet, square yards, square inches, acres, and hectares. Enjoy the flexibility of converting between any combination of area units effortlessly.
           </li>
           <li className="mb-2">
-            <strong>User-Friendly Interface:</strong> - The Area Converter on CalcPlus features a user-friendly
-            interface designed for easy navigation and seamless conversion. Enter your measurement in one unit, select
-            the desired output unit, and receive the precise conversion instantly.
+            <strong>User-Friendly Interface:</strong> - The Area Converter on CalcPlus features a user-friendly interface designed for easy navigation and seamless conversion.
+            Enter your measurement in one unit, select the desired output unit, and receive the precise conversion instantly.
           </li>
           <li className="mb-2">
-            <strong>Real-Time Conversion:</strong> - Experience real-time conversion as you input values into the area
-            converter. Watch as the tool updates the conversion instantly, allowing you to experiment with different
-            measurements and units.
+            <strong>Real-Time Conversion:</strong> - Experience real-time conversion as you input values into the area converter. Watch as the tool updates the conversion
+            instantly, allowing you to experiment with different measurements and units.
           </li>
           <li className="mb-2">
-            <strong>Flexible Decimal Precision:</strong> - Customize your area conversion results with CalcPlus. Choose
-            from different decimal precision options, such as two decimal places, four decimal places, or rounded-off
-            results, to match your specific needs.
+            <strong>Flexible Decimal Precision:</strong> - Customize your area conversion results with CalcPlus. Choose from different decimal precision options, such as two
+            decimal places, four decimal places, or rounded-off results, to match your specific needs.
           </li>
           <li className="mb-2">
-            <strong>Mobile-Friendly Design:</strong> - Access CalcPlus&apos;s Area Converter seamlessly from any device,
-            including smartphones, tablets, and desktops. Our responsive design ensures a consistent and user-friendly
-            experience, regardless of the screen size or platform.
+            <strong>Mobile-Friendly Design:</strong> - Access CalcPlus&apos;s Area Converter seamlessly from any device, including smartphones, tablets, and desktops. Our
+            responsive design ensures a consistent and user-friendly experience, regardless of the screen size or platform.
           </li>
           <li className="mb-2">
-            <strong>Time-Saving and Convenient: </strong> - CalcPlus&apos;s Area Converter saves you valuable time by
-            eliminating the need for manual calculations. Get accurate area conversions within seconds, freeing you to
-            focus on other important tasks.
+            <strong>Time-Saving and Convenient: </strong> - CalcPlus&apos;s Area Converter saves you valuable time by eliminating the need for manual calculations. Get accurate
+            area conversions within seconds, freeing you to focus on other important tasks.
           </li>
         </ol>
         <p className="text-sm mt-4">
-          <strong>Disclaimer:</strong> Please note that CalcPlus&apos;s Area Converter is for informational purposes
-          only and should not be used as a substitute for professional measurement or engineering advice. Always verify
-          the accuracy and appropriateness of the conversions for your specific needs. CalcPlus does not take
-          responsibility for any inaccuracies or errors in the conversions provided by the tool.
+          <strong>Disclaimer:</strong> Please note that CalcPlus&apos;s Area Converter is for informational purposes only and should not be used as a substitute for professional
+          measurement or engineering advice. Always verify the accuracy and appropriateness of the conversions for your specific needs. CalcPlus does not take responsibility for
+          any inaccuracies or errors in the conversions provided by the tool.
         </p>
       </div>
     </>

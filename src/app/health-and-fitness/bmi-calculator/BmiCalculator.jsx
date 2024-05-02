@@ -35,24 +35,20 @@ const BmiCalculator = () => {
   };
 
   return (
-    <div className="sm:grid grid-cols-5 gap-4 items-center w-full p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 ">
+    <div className="sm:grid grid-cols-5 gap-4 items-center w-full p-5 rounded-2xl drop-shadow-xl border border-gray-500 bg-gray-50 dark:bg-slate-900 dark:bg-slate-900 ">
       <form className="col-span-3" onSubmit={calculateBMI}>
         <div className="mb-4">
-          <div className="text-gray-700 font-bold mb-2 flex justify-between items-center">
+          <div className=" font-bold mb-2 flex justify-between items-center">
             Weight ({weightMetric}):
             <div className="inline-flex m-2 cursor-pointer">
               <div
-                className={`px-4 py-2 rounded-l-md ${
-                  weightMetric === "kg" ? "text-white bg-purple-700 " : "bg-gray-300"
-                }`}
+                className={`px-4 py-2 rounded-l-md ${weightMetric === "kg" ? "text-white bg-purple-700 " : "bg-gray-300 text-gray-800"}`}
                 onClick={() => changeWeightMetric("kg")}
               >
                 kg
               </div>
               <div
-                className={`px-4 py-2 rounded-r-md bg-gray-300 ${
-                  weightMetric === "lb" ? "text-white bg-purple-700 " : "bg-gray-300"
-                }`}
+                className={`px-4 py-2 rounded-r-md bg-gray-300 ${weightMetric === "lb" ? "text-white bg-purple-700 " : "bg-gray-300 text-gray-800"}`}
                 onClick={() => changeWeightMetric("lb")}
               >
                 lb
@@ -75,21 +71,17 @@ const BmiCalculator = () => {
         </div>
 
         <div className="mb-4">
-          <div className="text-gray-700 font-bold mb-2 flex justify-between items-center">
+          <div className=" font-bold mb-2 flex justify-between items-center">
             Height ({heightMetric}):
             <div className="inline-flex m-2 cursor-pointer">
               <div
-                className={`px-4 py-2 rounded-l-md ${
-                  heightMetric === "cm" ? "text-white bg-purple-700 " : "bg-gray-300"
-                }`}
+                className={`px-4 py-2 rounded-l-md ${heightMetric === "cm" ? "text-white bg-purple-700 " : "bg-gray-300 text-gray-800"}`}
                 onClick={() => changeHeightMetric("cm")}
               >
                 cm
               </div>
               <div
-                className={`px-4 py-2 rounded-r-md bg-gray-300 ${
-                  heightMetric === "ft" ? "text-white bg-purple-700 " : "bg-gray-300"
-                }`}
+                className={`px-4 py-2 rounded-r-md bg-gray-300 ${heightMetric === "ft" ? "text-white bg-purple-700 " : "bg-gray-300 text-gray-800"}`}
                 onClick={() => changeHeightMetric("ft")}
               >
                 ft
