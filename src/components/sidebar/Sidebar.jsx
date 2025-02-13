@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Sidebar.scss";
 import React from "react";
 import { HiOutlineXMark, HiBars3 } from "react-icons/hi2";
@@ -8,9 +8,15 @@ import Link from "next/link";
 import ThemeSwitcher from "../common/ThemeSwitcher";
 import { MdCalculate } from "react-icons/md";
 import SideBarList from "./SidebarList";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [pathname]);
+
   return (
     <div className="z-20">
       <div className="h-20  fixed top-0 left-0 w-full flex items-center px-5">
@@ -23,11 +29,7 @@ const Sidebar = () => {
           </div>
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
-            <button
-              className="text-4xl font-bold tracking-widest uppercase d-none sm:hidden block "
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              aria-label="Toggle Sidebar"
-            >
+            <button className="text-4xl font-bold tracking-widest uppercase d-none sm:hidden block " onClick={() => setIsSidebarOpen(!isSidebarOpen)} aria-label="Toggle Sidebar">
               {isSidebarOpen ? <HiOutlineXMark /> : <HiBars3 />}
             </button>
           </div>

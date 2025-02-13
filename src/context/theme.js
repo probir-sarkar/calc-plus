@@ -8,6 +8,7 @@ const ThemeContext = createContext({});
 
 export const ThemeContextProvider = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
+
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
